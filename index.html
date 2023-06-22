@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Follow-up Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-5">Interview Follow-up Generator</h1>
+        <div class="form-group">
+            <div class="d-flex justify-content-between align-items-center">
+                <label for="openAiKeyInput" class="mb-0" style="width: 115px;">OpenAI Key:</label>
+                <input type="text" class="form-control" id="openAiKeyInput" placeholder="Enter your OpenAI Key">
+            </div>
+            <div class="d-flex align-items-center mt-2">
+                <button id="submitOpenAiKeyBtn" class="btn btn-primary mt-0">Submit OpenAI Key</button>
+                <a href="https://platform.openai.com/signup" target="_blank" class="ml-2 mb-0">How to find your OpenAI Key</a>
+            </div>
+        </div>
+        <div class="form-group" id="jobDescriptionForm" style="display: none;">
+            <hr class="mb-4 mt-3" />
+            <label for="jobDescriptionInput">Job Description</label>
+            <select id="jobDescriptionSelect" class="form-control mb-2" disabled>
+                <option value="">Select a template</option>
+                <option value="Senior Full-Stack Engineer">Senior Full-Stack Engineer</option>
+                <option value="Sample Template">Sample Template</option>
+            </select>
+            <div id="jobDescriptionEditor">
+                <textarea class="form-control" id="jobDescriptionInput" placeholder="Enter the job description" disabled></textarea>
+                <button id="submitJobDescriptionBtn" class="btn btn-primary mt-2" disabled>Submit Job Description</button>
+            </div>
+            <button id="loadTemplateQuestionsBtn" class="btn btn-primary mt-2 mb-3" style="display: none;">Load Template Questions</button>
+            <div id="jobDescriptionDisplay" class="mt-2" style="display: none;">
+                <div id="jobDescriptionText"></div>
+                <button id="editJobDescriptionBtn" class="btn btn-link">Edit</button>
+            </div>
+        </div>
+        <div id="questionContainer">
+            <!-- Questions will be dynamically added here -->
+        </div>
+        <button id="addQuestionBtn" class="btn btn-primary mt-3" disabled>Add Question</button>
+        <!-- <button id="newInterviewBtn" class="btn btn-secondary mt-3 ml-2">Start New Interview</button> -->
+        <!-- <button id="showInterviewsBtn" class="btn btn-info mt-3 ml-2">Show Interviews</button> -->
+    </div>
+    <!--<div id="interviewMenu" class="mt-5">
+        <h2>Previous Interviews <button id="closeInterviewsBtn" class="btn btn-sm btn-secondary">Close</button></h2>
+        
+        <div id="interviewList">
+             Previous interviews will be dynamically added here 
+        </div>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
